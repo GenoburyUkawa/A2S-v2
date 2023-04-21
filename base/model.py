@@ -22,7 +22,7 @@ def Network(net_name, config):
         encoder = resnet101(pretrained=True)
         fl = [64, 256, 512, 1024, 2048]
     elif config['backbone'] == 'eff':
-        encoder = EfficientNet.from_pretrained('efficientnet-b0', weights_path='../PretrainModel/efficientnet-b0-355c32eb.pth')
+        encoder = EfficientNet.from_pretrained('efficientnet-b0', weights_path='PretrainModel/efficientnet-b0-355c32eb.pth')
         fl = [16, 24, 40, 112, 1280]
     elif config['backbone'] == 'mobile':
         encoder = mobilenet()

@@ -235,9 +235,9 @@ def _resnet(arch, block, layers, pretrained, progress, **kwargs):
     model = ResNet(block, layers, **kwargs)
     #new_dict = None
     #state_dict = torch.load('../PretrainModel/moco_v2_800ep_pretrain.pth.tar', map_location='cpu')
-    
-    state_dict = torch.load('../PretrainModel/moco_v2_200ep_pretrain.pth.tar', map_location='cpu')
-    
+    state_dict = torch.load('base/PretrainModel/moco_v2_200ep_pretrain.pth.tar', map_location='cpu')
+    #state_dict = torch.load('C:\Users\曾宇\Desktop\A2S-v2\base\PretrainModel\moco_v2_200ep_pretrain.pth.tar', map_location='cpu')
+
     print('Use MoCo 200 pretrain!')
     new_dict = {}
     for k, v in state_dict["state_dict"].items():
